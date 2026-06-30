@@ -1,28 +1,23 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
- 
- 
-Route::get('/', function () {
-    return view('pages.home');
-});
 
-Route::get('/about', function () {
-    return view('pages.about');
-});
+/*
+|--------------------------------------------------------------------------
+| Web Routes SkySoft
+|--------------------------------------------------------------------------
+| Landing Page + Scroll Section (UI Project)
+*/
 
-Route::get('/services', function () {
-    return view('pages.services');
-});
+Route::view('/', 'pages.hero')->name('home');
 
-Route::get('/portfolio', function () {
-    return view('pages.portfolio');
-});
-
-Route::get('/team', function () {
-    return view('pages.team');
-});
-
-Route::get('/contact', function () {
-    return view('pages.contact');
-});
+/*
+| OPTIONAL (aktifkan kalau nanti mau multi page)
+|
+| Route::view('/about', 'pages.about')->name('about');
+| Route::view('/services', 'pages.services')->name('services');
+| Route::view('/portfolio', 'pages.portfolio')->name('portfolio');
+| Route::view('/team', 'pages.team')->name('team');
+| Route::view('/contact', 'pages.contact')->name('contact');
+|
+*/
